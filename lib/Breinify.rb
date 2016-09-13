@@ -174,7 +174,7 @@ module Breinify
       # Create the HTTP objects
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true if uri.scheme == 'https'
-      request = Net::HTTP::Post.new(uri.request_uri, {'accept': 'application/json'})
+      request = Net::HTTP::Post.new(uri.request_uri, {'accept' => 'application/json'})
       request.body = data.to_json
       @@logger.debug 'JSON data request is: ' + data.to_json.to_s
 
@@ -226,4 +226,3 @@ module Breinify
 
 
 end
-
